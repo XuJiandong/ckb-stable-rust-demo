@@ -1,0 +1,20 @@
+[package]
+name = "ckb-stable-rust-demo"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ckb-std = { path = "deps/ckb-std", default-features = false, features = ["allocator", "ckb-types"]}
+[profile.release]
+overflow-checks = true
+opt-level = 3
+panic = 'abort'
+strip = true
+
+[profile.dev]
+strip = true
+opt-level = 1
+debug = false
+panic = 'abort'

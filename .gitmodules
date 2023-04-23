@@ -1,0 +1,4 @@
+[submodule "deps/ckb-std"]
+	path = deps/ckb-std
+	url = https://github.com/XuJiandong/ckb-std.git
+	branch = use-stable-rust
