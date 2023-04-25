@@ -104,7 +104,7 @@ unsafe impl GlobalAlloc for NeverFreeAlloc {
             }
         };
         let p = (&mut HEAP[USED_HEAP_SIZE..USED_HEAP_SIZE + size]).as_mut_ptr();
-        USED_HEAP_SIZE += layout.size();
+        USED_HEAP_SIZE += size;
         p
     }
     unsafe fn dealloc(&self, _ptr: *mut u8, _layout: Layout) {}
