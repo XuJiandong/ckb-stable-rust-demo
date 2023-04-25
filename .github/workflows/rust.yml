@@ -1,0 +1,21 @@
+name: Rust
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Init and update submodules
+      run: |
+        git submodule update --init
+    - name: Run installation
+      run: make install
+    - name: Run CI
+      run: make ci
+
+
+  
