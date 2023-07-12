@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 ckb-std = { path = "deps/ckb-std", default-features = false, features = ["allocator", "ckb-types"]}
 buddy-alloc = { version = "0.5.0"}
+bytes = { version = "1.4.0", default-features = false }
 
 [profile.release]
 overflow-checks = true
