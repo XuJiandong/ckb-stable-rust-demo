@@ -27,6 +27,7 @@ run-bytes:
 ci: all
 	make run 
 	make run-vanilla
+	make run-bytes
 	make run-panic || echo "ignore"
 	make run-oom  || echo "ignore"
 
