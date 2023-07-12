@@ -8,7 +8,7 @@ all:
 	cargo build --release --target riscv64imac-unknown-none-elf
 	cargo build --release --bin panic --target riscv64imac-unknown-none-elf
 	cargo build --release --bin oom --target riscv64imac-unknown-none-elf
-	
+	cargo build --release --bin bytes --target riscv64imac-unknown-none-elf
 run:
 	$(CKB_DEBUGGER) --bin target/riscv64imac-unknown-none-elf/release/ckb-stable-rust-demo
 
@@ -20,6 +20,9 @@ run-oom:
 
 run-vanilla:
 	$(CKB_DEBUGGER) --bin target/riscv64imac-unknown-none-elf/release/vanilla	
+
+run-bytes:
+	$(CKB_DEBUGGER) --bin target/riscv64imac-unknown-none-elf/release/bytes
 
 ci: all
 	make run 
