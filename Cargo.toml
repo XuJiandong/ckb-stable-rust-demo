@@ -6,7 +6,7 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-ckb-std = { path = "deps/ckb-std", default-features = false, features = ["allocator", "ckb-types"]}
+ckb-std = { path = "deps/ckb-std", features = ["build-with-clang"]}
 buddy-alloc = { version = "0.5.0"}
 bytes = { version = "1.4.0", default-features = false }
 

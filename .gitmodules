@@ -1,4 +1,4 @@
 [submodule "deps/ckb-std"]
 	path = deps/ckb-std
-	url = https://github.com/XuJiandong/ckb-std.git
-	branch = use-stable-rust
+	url = https://github.com/nervosnetwork/ckb-std.git
+	branch = master

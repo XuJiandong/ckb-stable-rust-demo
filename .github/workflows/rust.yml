@@ -10,8 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Init and update submodules
-      run: |
-        git submodule update --init
+      run: git submodule update --init --recursive
     - name: Run installation
       run: make install
     - name: Run CI

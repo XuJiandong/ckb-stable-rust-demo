@@ -36,3 +36,4 @@ install:
 	rustup target add riscv64imac-unknown-none-elf
 	wget 'https://github.com/nervosnetwork/ckb-standalone-debugger/releases/download/v0.108.1/ckb-debugger-linux-x64.tar.gz'
 	tar -xzvf ckb-debugger-linux-x64.tar.gz && mv ckb-debugger ~/.cargo/bin
+	wget https://apt.llvm.org/llvm.sh && chmod +x llvm.sh && sudo ./llvm.sh 16 && rm llvm.sh
